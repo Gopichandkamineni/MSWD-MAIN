@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const course ={
+  const data ={
     name: 'Half Stack application development',
     parts:[
       {
@@ -22,16 +22,16 @@ function App() {
   
   return (
     <div>
-      <Header course={course.name} />
-      <Content parts={course.parts}/>
-      <Total parts={course.parts}/>
+      <Header data={data.name} />
+      <Content parts={data.parts}/>
+      <Total parts={data.parts}/>
     </div>
     
   )
 }
 const Header=(props)=>{
   console.log(props)
- return <h1>{props.course}</h1>
+ return <h1>{props.data}</h1>
 };
 const Part=({part})=> {
   return <p>{part.name} : {part.exercises}</p>
